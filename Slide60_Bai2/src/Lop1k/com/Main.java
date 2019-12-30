@@ -47,15 +47,21 @@ public class Main
 	}
 	private static void xuatSinhVienTen()
 	{
-		
+		System.out.println("Danh sách tên sinh viên.");
+		dsSV.forEach((key, value) -> System.out.println(value));
 	}
 	private static void xuatSinhVienMa() 
 	{
-		
+		System.out.println("Danh sách mã sinh viên.");
+		dsSV.forEach((key, value) -> System.out.println(key));
 	}
 	private static void timAn() 
 	{
-		
+		Collection<String> value = dsSV.values();
+		for ( String sv: value) {
+			if (sv.contains("An"))
+			System.out.println(sv);
+		} 
 	}
 	private static void xoaSinhVien()
 	{
